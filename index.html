@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/pp1.jpg">
+    <title>Spin Wheel RNG - Game Hadiah</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <h1 class="title">🎰 Spin Wheel RNG 🎰</h1>
+        <p class="subtitle">Putar roda dan menangkan hadiah menarik!</p>
+
+        <div class="game-layout">
+            <!-- Rewards List -->
+            <div class="rewards-list">
+                <h3 class="rewards-title">🎁 Daftar Hadiah</h3>
+                <div class="reward-item reward-item-1">
+                    <div class="reward-info">
+                        <span class="reward-emoji">🪙</span>
+                        <span class="reward-name">Coin x10</span>
+                    </div>
+                    <div class="reward-chance">
+                        <span class="percentage">40%</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reward-item reward-item-2">
+                    <div class="reward-info">
+                        <span class="reward-emoji">💰</span>
+                        <span class="reward-name">Coin x50</span>
+                    </div>
+                    <div class="reward-chance">
+                        <span class="percentage">30%</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reward-item reward-item-3">
+                    <div class="reward-info">
+                        <span class="reward-emoji">🎨</span>
+                        <span class="reward-name">Skin Biasa</span>
+                    </div>
+                    <div class="reward-chance">
+                        <span class="percentage">15%</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 15%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reward-item reward-item-4">
+                    <div class="reward-info">
+                        <span class="reward-emoji">✨</span>
+                        <span class="reward-name">Skin Langka</span>
+                    </div>
+                    <div class="reward-chance">
+                        <span class="percentage">10%</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 10%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reward-item reward-item-5">
+                    <div class="reward-info">
+                        <span class="reward-emoji">👑</span>
+                        <span class="reward-name">Skin Epic</span>
+                    </div>
+                    <div class="reward-chance">
+                        <span class="percentage">5%</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 5%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wheel Section -->
+            <div class="wheel-section">
+                <div class="wheel-container">
+                    <!-- Pointer/Arrow -->
+                    <div class="pointer"></div>
+                    
+                    <!-- Spin Wheel -->
+                    <div class="wheel" id="wheel">
+                        <div class="segment segment-1">
+                            <span class="segment-text">Coin<br>x10<br>40%</span>
+                        </div>
+                        <div class="segment segment-2">
+                            <span class="segment-text">Coin<br>x50<br>30%</span>
+                        </div>
+                        <div class="segment segment-3">
+                            <span class="segment-text">Skin<br>Biasa<br>15%</span>
+                        </div>
+                        <div class="segment segment-4">
+                            <span class="segment-text">Skin<br>Langka<br>10%</span>
+                        </div>
+                        <div class="segment segment-5">
+                            <span class="segment-text">Skin<br>Epic<br>5%</span>
+                        </div>
+                        
+                        <!-- Center Circle -->
+                        <div class="center-circle">
+                            <div class="center-text">SPIN</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spin Button -->
+                <button class="spin-button" id="spinButton">
+                    <span class="button-text">🎯 SPIN SEKARANG 🎯</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Total Spin:</span>
+                <span class="stat-value" id="totalSpins">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Hadiah Terakhir:</span>
+                <span class="stat-value" id="lastReward">-</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Popup Modal -->
+    <div class="modal" id="resultModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🎉 Selamat! 🎉</h2>
+            </div>
+            <div class="modal-body">
+                <div class="reward-icon" id="rewardIcon">🎁</div>
+                <h3 class="reward-title" id="rewardTitle">Hadiah Anda</h3>
+                <p class="reward-description" id="rewardDescription">Kamu mendapatkan hadiah menarik!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="close-button" id="closeModal">Tutup</button>
+                <button class="spin-again-button" id="spinAgain">Spin Lagi</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="watermark">by JiwanDev</div>
+
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
